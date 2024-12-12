@@ -1,10 +1,13 @@
 # For licensing see accompanying LICENSE file.
 # Copyright (C) 2024 Apple Inc. All Rights Reserved.
-from typing import Any, Callable, Optional, Tuple
+import numbers
+from typing import Any, Callable, Optional, Tuple, Union, List
 
 import torch
 from torch import nn
-from torch.nn import functional as F
+from torch import Size
+from torch.nn.parameter import Parameter
+from torch.nn import functional as F, init
 
 from aim.v1.torch.layers import (
     Attention,
@@ -23,6 +26,8 @@ __all__ = [
     "PatchEmbed",
     "Attention",
 ]
+
+_shape_t = Union[int, List[int], Size]
 
 class RMSNorm(nn.Module):
     r"""Applies Root Mean Square Layer Normalization over a mini-batch of inputs.
