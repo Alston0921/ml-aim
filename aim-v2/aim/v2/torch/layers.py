@@ -16,7 +16,7 @@ from aim.v1.torch.layers import (
 __all__ = [
     "TextPreprocessor",
     "ExtractEOS",
-    "RMSNorm",
+    # "RMSNorm",
     "SwiGLUFFN",
     "AttentionPoolingClassifier",
     "ViTPreprocessor",
@@ -24,7 +24,7 @@ __all__ = [
     "Attention",
 ]
 
-RMSNorm = nn.RMSNorm
+# RMSNorm = nn.RMSNorm
 
 
 class TextPreprocessor(nn.Module):
