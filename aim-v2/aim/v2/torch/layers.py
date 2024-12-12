@@ -24,7 +24,7 @@ __all__ = [
     "Attention",
 ]
 
-class RMSNorm(Module):
+class RMSNorm(nn.Module):
     r"""Applies Root Mean Square Layer Normalization over a mini-batch of inputs.
 
     This layer implements the operation as described in
